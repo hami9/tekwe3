@@ -161,18 +161,27 @@ https://github.com/hami9/tekwe3
 ## 9. Checklist — complete before the repository goes public
 
 ```
+[x] LICENSE — CC BY 4.0, covering the documentation this repository holds
+[x] LICENSE-APACHE and LICENSE-MIT present at the repository root
+[x] NOTICE file with the trademark reservation from §8
+[x] LICENSING.md — the split, stated before code makes it ambiguous
+[x] This AUTHORSHIP.md committed
+[x] README credits the author by name, above the fold
+[x] CONTRIBUTING.md states the DCO requirement
+[x] SECURITY.md — disclosure policy, and how to report a design flaw
+[x] CITATION.cff — machine-readable, canonical title
 [ ] Copyright line with the author's name in every source file
-[ ] LICENSE-APACHE and LICENSE-MIT present at the repository root
-[ ] NOTICE file with the trademark reservation from §8
-[ ] This AUTHORSHIP.md committed
+      → nothing to do until code exists; SPDX header specified in LICENSING.md §3
 [ ] docs/CITATIONS.md complete — every borrowed algorithm credited
-[ ] README credits the author by name, above the fold
-[ ] CONTRIBUTING.md states the DCO requirement
+      → P0 deliverable; docs/ARCHITECTURE.md carries the credit meanwhile
 [ ] Git commits signed (`git config commit.gpgsign true`)
 [ ] Employment IP position confirmed, if applicable
 [ ] Project name checked for existing trademarks in software
 [ ] First release archived for a timestamped record (Software Heritage or Zenodo)
 ```
+
+The five open items are the ones that cannot be closed by writing a file: two
+wait for code, and three require an action outside the repository.
 
 ---
 

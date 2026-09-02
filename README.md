@@ -1,6 +1,7 @@
 # TEKWE3 — A Design for Transactionally Consistent Hybrid Search
 
 **Status: design specification. Not implemented.**
+**Author: Hami, 2026.**
 
 This repository contains a complete engineering specification for a single-node storage engine in which key-value, full-text, and vector indexes live inside the same immutable segment — sharing one write-ahead log, one MVCC snapshot, and one compaction pipeline.
 
@@ -97,11 +98,13 @@ PGM-Index (Ferragina & Vinciguerra), BuRR (Dillinger et al.), RaBitQ (Gao & Long
 
 ## License
 
-**Documentation and specification:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — use, adapt, and build on it freely, including commercially. Attribution required.
+**Documentation and specification:** [CC BY 4.0](LICENSE) — use, adapt, and build on it freely, including commercially. Attribution required.
 
-**Any code added later:** Apache-2.0 OR MIT.
+**Any code added later:** [Apache-2.0](LICENSE-APACHE) OR [MIT](LICENSE-MIT), at your option.
 
-**The TEKWE3 name is not licensed** under either. See `AUTHORSHIP.md` and `LICENSING.md`.
+**The TEKWE3 name is not licensed** under either. The full split is in [`LICENSING.md`](LICENSING.md); copyright, moral rights, and the trademark position in [`AUTHORSHIP.md`](AUTHORSHIP.md).
+
+Found a hole in the design? [`SECURITY.md`](SECURITY.md) says what is most worth reporting. Sending a change? [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Citation
 
