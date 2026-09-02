@@ -9,6 +9,11 @@ type: software
 authors:
   - alias: Hami
     name: Hami
+doi: 10.5281/zenodo.22262651
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22262651
+    description: Zenodo archive of the v1.0 release
 repository-code: https://github.com/hami9/tekwe3
 url: https://github.com/hami9/tekwe3
 abstract: >-

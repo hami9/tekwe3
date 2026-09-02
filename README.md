@@ -3,6 +3,9 @@
 **Status: design specification. Not implemented.**
 **Author: Hami, 2026.**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22262651.svg)](https://doi.org/10.5281/zenodo.22262651)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](LICENSE)
+
 This repository contains a complete engineering specification for a single-node storage engine in which key-value, full-text, and vector indexes live inside the same immutable segment — sharing one write-ahead log, one MVCC snapshot, and one compaction pipeline.
 
 I designed it. I do not have the hardware to build it. It is published here in full, with a permissive license, in case someone who does wants to.
@@ -111,10 +114,14 @@ Found a hole in the design? [`SECURITY.md`](SECURITY.md) says what is most worth
 ```
 Hami. TEKWE3: A Design for Transactionally Consistent Hybrid Search
 in a Unified Tri-Modal Storage Engine. 2026.
+https://doi.org/10.5281/zenodo.22262651
 https://github.com/hami9/tekwe3
 ```
 
-A machine-readable `CITATION.cff` is at the repository root.
+A machine-readable `CITATION.cff` is at the repository root. The v1.0 release
+is archived on Zenodo under the DOI above and in the Software Heritage
+archive, so the design has a citable, timestamped record independent of
+GitHub.
 
 ---
 
