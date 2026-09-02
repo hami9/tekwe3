@@ -4,6 +4,8 @@
 
 **If you are a new agent:** read `AGENTS.md` §0 (context budget) and §2 (constitution) once, then come back here. Do not read anything else until this file tells you to.
 
+**What exists today.** This repository holds the specification only: `AGENTS.md`, `AUTHORSHIP.md`, and `docs/{ARCHITECTURE,ROADMAP,CONTEXT_SYSTEM,TESTING,IDEA_INTAKE,AUDIT,KICKOFF}.md`. Every other file named below — `STATE.md`, `docs/INVARIANTS.md`, `docs/spec/*`, `docs/adr/*`, `docs/worklog/*`, `crates/*/CONTEXT.md`, `logs/*` — is a P0 deliverable that does not exist yet. The tables below are the target state: a missing file is work to create, not a broken link.
+
 ---
 
 ## Always read (Tier 0) — ~1.5k tokens

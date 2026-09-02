@@ -42,11 +42,11 @@ All seven documents are consistent; zero stale references remain.
 
 | # | Gap | Fix |
 |---|---|---|
-| 1 | No licensing anywhere | P0 legal foundation: dual Apache-2.0/MIT, SPDX headers, `cargo-deny` in the gate, `LICENSING.md`, ADR-0002 |
+| 1 | No licensing anywhere | P0 legal foundation: dual Apache-2.0/MIT, SPDX headers, `cargo-deny` in the gate, `LICENSING.md`, ADR-0002. *Done for this repository:* `LICENSE` (CC BY 4.0), `LICENSE-APACHE`, `LICENSE-MIT`, `NOTICE`, `LICENSING.md`. `cargo-deny` and SPDX headers wait for code. |
 | 2 | Algorithms implemented from papers with no attribution or license trail | `docs/CITATIONS.md` — per algorithm: paper, reference implementation, its license, **and whether we read that code**. Implementing from the paper alone is the default. |
 | 3 | No format compatibility promise | `docs/COMPATIBILITY.md` — a stronger commitment than semver, since users' data depends on it |
 | 4 | No dependency admission criteria | `docs/DEPENDENCY_POLICY.md` — license, maintenance, MSRV, transitive weight, build-vs-audit |
-| 5 | No security or disclosure policy | `SECURITY.md` in P0, before the repo is public |
+| 5 | No security or disclosure policy | `SECURITY.md` in P0, before the repo is public. *Done:* `SECURITY.md` at the root, carrying the S0/S1/S2 ladder from §2(b) until `docs/INCIDENT.md` exists. |
 | 6 | Benchmark and dataset publication rights unexamined | P14 legal review: DeWitt clauses, BEIR/SIFT/YCSB terms, `docs/benchmarks/DATASETS.md` |
 
 ### ⚠️ Remaining gaps — create these during P0
@@ -109,15 +109,18 @@ docs/benchmarks/  narrative writeups that cite those artifacts — human-read
 
 ## 4. The document set
 
-| # | File | Repository path | Read frequency |
-|---|---|---|---|
-| 00 | INDEX | `docs/INDEX.md` | Every session, first |
-| 01 | Architecture | `docs/ARCHITECTURE.md` → split into `docs/spec/` in P0-011 | Rare (Tier 3) |
-| 02 | Roadmap | `docs/ROADMAP.md` | Phase boundaries |
-| 03 | System prompt | `AGENTS.md` | Once per agent generation |
-| 04 | Context system | `docs/CONTEXT_SYSTEM.md` | When writing docs |
-| 05 | Testing | `docs/TESTING.md` | Testing and triage sessions |
-| 06 | Idea intake | `docs/IDEA_INTAKE.md` | Whenever an idea arrives |
+| File | Repository path | Read frequency |
+|---|---|---|
+| INDEX | `docs/INDEX.md` | Every session, first |
+| Architecture | `docs/ARCHITECTURE.md` → split into `docs/spec/` in P0-011 | Rare (Tier 3) |
+| Roadmap | `docs/ROADMAP.md` | Phase boundaries |
+| System prompt | `AGENTS.md` (`CLAUDE.md` symlinks to it) | Once per agent generation |
+| Context system | `docs/CONTEXT_SYSTEM.md` | When writing docs |
+| Testing | `docs/TESTING.md` | Testing and triage sessions |
+| Idea intake | `docs/IDEA_INTAKE.md` | Whenever an idea arrives |
+| This audit | `docs/AUDIT.md` | Once, at P0 — then archived per KICKOFF F5 |
+| Kickoff | `docs/KICKOFF.md` | Once, at P0 — then archived per KICKOFF F5 |
+| Authorship | `AUTHORSHIP.md` | Before publishing anything |
 
 ---
 

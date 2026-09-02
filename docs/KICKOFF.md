@@ -50,25 +50,30 @@ The agent will otherwise pick these silently. Settle them in session 1 as ADRs:
 
 The repository does not exist yet, so there is no `STATE.md` to read. Tell the agent explicitly, or it will hunt for files that are not there. The Session 1 prompt below already says so.
 
-### 🟢 F5 — `07_FINAL_AUDIT.md` is not a repository document
+### 🟢 F5 — `docs/AUDIT.md` is not a repository document
 
-It is the P0 backlog. Convert its findings into task files, then archive it at `docs/worklog/phase-0-inputs.md`. Do not leave it in `docs/` as a permanent file.
+It is the P0 backlog. Convert its findings into task files, then archive it at `docs/worklog/phase-0-inputs.md`. Do not leave it in a build repository's `docs/` as a permanent file.
+
+**Deviation, deliberate:** in *this* repository — a published design specification with no code — the audit and this kickoff stay visible at `docs/AUDIT.md` and `docs/KICKOFF.md`. A reader evaluating the design should be able to find its self-criticism without digging through a worklog archive. F5 applies the moment an implementation repository exists.
 
 ---
 
 ## 2. File → repository path
 
-| Give the agent | It goes here |
-|---|---|
-| `00_INDEX.md` | `docs/INDEX.md` |
-| `01_ARCHITECTURE.md` | `docs/ARCHITECTURE.md`, then split into `docs/spec/` (P0-011) |
-| `02_ROADMAP.md` | `docs/ROADMAP.md` |
-| `03_SYSTEM_PROMPT.md` | `AGENTS.md` + `CLAUDE.md` symlink, then split per F2 |
-| `04_CONTEXT_SYSTEM.md` | `docs/CONTEXT_SYSTEM.md` |
-| `05_TESTING_PROMPT.md` | `docs/TESTING.md` |
-| `06_IDEA_INTAKE_PROMPT.md` | `docs/IDEA_INTAKE.md` |
-| `07_FINAL_AUDIT.md` | Convert to tasks → `docs/worklog/phase-0-inputs.md` |
-| `08_KICKOFF.md` | This file → `docs/worklog/phase-0-inputs.md` too |
+The documents already sit at these paths in this repository, so a build repository can copy the tree unchanged.
+
+| Document | Path | What still has to happen to it |
+|---|---|---|
+| Router | `docs/INDEX.md` | Nothing — read it first, every session |
+| Architecture | `docs/ARCHITECTURE.md` | Split into `docs/spec/` (P0-011) |
+| Roadmap | `docs/ROADMAP.md` | Nothing |
+| Operating manual | `AGENTS.md` (+ `CLAUDE.md` symlink) | Split per F2 (P0-002) |
+| Context system | `docs/CONTEXT_SYSTEM.md` | Nothing |
+| Testing | `docs/TESTING.md` | Nothing |
+| Idea intake | `docs/IDEA_INTAKE.md` | Nothing |
+| Audit | `docs/AUDIT.md` | Convert to tasks → `docs/worklog/phase-0-inputs.md` (see F5) |
+| Kickoff | `docs/KICKOFF.md` | This file → `docs/worklog/phase-0-inputs.md` too (see F5) |
+| Authorship | `AUTHORSHIP.md` | Nothing — root, alongside `LICENSING.md` and `NOTICE` |
 
 **Tooling note.** For Claude Code, `AGENTS.md` at the repository root is picked up automatically; also symlink it as `CLAUDE.md`. For Cursor, `.cursorrules`. For anything else, paste it as the system prompt.
 
@@ -105,13 +110,13 @@ only session with no bootstrap ritual: the repository does not exist yet,
 so there is no STATE.md to read. Do not look for one.
 
 I am providing 7 documents. Read them in this order:
-  1. 03_SYSTEM_PROMPT  → your operating manual. Read fully, once.
-  2. 01_ARCHITECTURE   → the design
-  3. 02_ROADMAP        → phases and exit criteria; you are in P0
-  4. 00_INDEX          → the router
-  5. 04_CONTEXT_SYSTEM → documentation architecture and size caps
-  6. 05_TESTING        → test and log preservation
-  7. 06_IDEA_INTAKE    → idea capture and change control
+  1. AGENTS.md               → your operating manual. Read fully, once.
+  2. docs/ARCHITECTURE.md    → the design
+  3. docs/ROADMAP.md         → phases and exit criteria; you are in P0
+  4. docs/INDEX.md           → the router
+  5. docs/CONTEXT_SYSTEM.md  → documentation architecture and size caps
+  6. docs/TESTING.md         → test and log preservation
+  7. docs/IDEA_INTAKE.md     → idea capture and change control
 
 YOUR JOB THIS SESSION: scaffolding only. Write NO engine code. Not one
 line. If you feel the urge to implement something, that is the failure
