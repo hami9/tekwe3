@@ -97,7 +97,7 @@ The design contains original engineering work. Recording it here establishes pro
 
 Claiming another researcher's algorithm as one's own would destroy the credibility of the genuine contributions above. Correct attribution protects the author's claims, it does not weaken them.
 
-**Establishing the date:** the git history is the primary record. Every commit is timestamped and signed. For stronger evidence, tag the first public release and archive it — a Software Heritage archive or a Zenodo DOI both produce a citable, timestamped record independent of GitHub.
+**Establishing the date:** the git history is the primary record. Every commit is timestamped; commit signing is still an open item in §9, and until it is turned on the timestamps carry the weight alone. For stronger evidence, tag the first public release and archive it — a Software Heritage archive or a Zenodo DOI both produce a citable, timestamped record independent of GitHub.
 
 ---
 
@@ -176,11 +176,17 @@ https://github.com/hami9/tekwe3
       → P0 deliverable; docs/ARCHITECTURE.md carries the credit meanwhile
 [ ] Git commits signed (`git config commit.gpgsign true`)
 [ ] Employment IP position confirmed, if applicable
-[ ] Project name checked for existing trademarks in software
+[~] Project name checked for existing trademarks in software
+      → informal search, 2026-09-02: no crate on crates.io, no npm package,
+        and no software trademark found under TEKWE3 or TEKWE. Nearest hit
+        is TEK WEH (US reg. 5522942), pharmaceuticals — a different class,
+        different mark. This is a clearance search, not legal clearance:
+        the register still has to be searched in the jurisdictions that
+        matter before the name is relied on commercially.
 [ ] First release archived for a timestamped record (Software Heritage or Zenodo)
 ```
 
-The five open items are the ones that cannot be closed by writing a file: two
+The remaining open items are the ones that cannot be closed by writing a file: two
 wait for code, and three require an action outside the repository.
 
 ---
