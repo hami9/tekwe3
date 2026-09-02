@@ -102,9 +102,18 @@ PGM-Index (Ferragina & Vinciguerra), BuRR (Dillinger et al.), RaBitQ (Gao & Long
 ```
 Hami. TEKWE3: A Design for Transactionally Consistent Hybrid Search
 in a Unified Tri-Modal Storage Engine. 2026.
-https://github.com/<user>/tekwe3-design
+https://github.com/hami9/tekwe3
 ```
 
+A machine-readable `CITATION.cff` is at the repository root.
+
 ---
+
+```
+TEKWE3 — created and authored by Hami.
+Documentation licensed under CC BY 4.0; any code under Apache-2.0 OR MIT.
+The TEKWE3 name and logo are trademarks of the author and are
+not licensed under the above.
+```
 
 *Designed by Hami, 2026. If you build it, tell me.*

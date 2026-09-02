@@ -142,17 +142,18 @@ Every source file carries:
 
 ```
 TEKWE3 — created and authored by Hami.
-Licensed under Apache-2.0 OR MIT.
+Documentation licensed under CC BY 4.0; any code under Apache-2.0 OR MIT.
 The TEKWE3 name and logo are trademarks of the author and are
 not licensed under the above.
 ```
 
-For academic or technical citation:
+For academic or technical citation — this is the canonical title, and it is
+the one recorded in `CITATION.cff`:
 
 ```
-Hami. TEKWE3: A Unified Tri-Modal Storage Engine with
-Transactionally Consistent Hybrid Search. 2026.
-https://github.com/<user>/<repo>
+Hami. TEKWE3: A Design for Transactionally Consistent Hybrid Search
+in a Unified Tri-Modal Storage Engine. 2026.
+https://github.com/hami9/tekwe3
 ```
 
 ---
