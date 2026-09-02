@@ -1,6 +1,7 @@
 # TEKWE3 — A Design for Transactionally Consistent Hybrid Search
 
 **Status: design specification. Not implemented.**
+**Author: Hami, 2026.**
 
 This repository contains a complete engineering specification for a single-node storage engine in which key-value, full-text, and vector indexes live inside the same immutable segment — sharing one write-ahead log, one MVCC snapshot, and one compaction pipeline.
 
@@ -36,17 +37,23 @@ The result is a hybrid query — predicate filter, BM25, and approximate nearest
 
 ## What is in this repository
 
+Every document sits at the path it expects to be read from, so a repository
+that starts building can adopt the tree as-is.
+
 | File | Contents |
 |---|---|
-| `01_ARCHITECTURE.md` | Full design: execution model, data paths, on-disk format, correctness architecture |
-| `02_ROADMAP.md` | Fifteen phases with concrete, falsifiable exit criteria |
-| `03_SYSTEM_PROMPT.md` | Operating manual for AI contributors on a long project |
-| `04_CONTEXT_SYSTEM.md` | Documentation architecture: size caps, rotation, progressive disclosure |
-| `05_TESTING_PROMPT.md` | Test and log-preservation system; deterministic seed management |
-| `06_IDEA_INTAKE_PROMPT.md` | Change control: how a mid-project idea is captured without eroding invariants |
-| `07_FINAL_AUDIT.md` | Self-audit of the document set, including its own gaps |
-| `08_KICKOFF.md` | Session-by-session start guide, and unresolved decisions |
-| `09_AUTHORSHIP.md` | Copyright, moral rights, trademark, attribution |
+| `docs/ARCHITECTURE.md` | Full design: execution model, data paths, on-disk format, correctness architecture |
+| `docs/ROADMAP.md` | Fifteen phases with concrete, falsifiable exit criteria |
+| `AGENTS.md` | Operating manual for AI contributors on a long project (`CLAUDE.md` is a symlink to it) |
+| `docs/CONTEXT_SYSTEM.md` | Documentation architecture: size caps, rotation, progressive disclosure |
+| `docs/TESTING.md` | Test and log-preservation system; deterministic seed management |
+| `docs/IDEA_INTAKE.md` | Change control: how a mid-project idea is captured without eroding invariants |
+| `docs/AUDIT.md` | Self-audit of the document set, including its own gaps |
+| `docs/KICKOFF.md` | Session-by-session start guide, and unresolved decisions |
+| `docs/INDEX.md` | The reading router — which files a given task requires |
+| `AUTHORSHIP.md` | Copyright, moral rights, trademark, attribution |
+| `LICENSING.md` | What is licensed under what |
+| `article.md` | The design's argument in essay form, and `publish/` its posting kit |
 
 ## Design highlights
 
@@ -78,33 +85,44 @@ Everything needed is here. A few starting notes:
 
 - **Start at Phase 0.** The deterministic simulator is built before the engine. If it is built last, the engine has to be rewritten to become deterministic.
 - **Phase 8 is a legitimate stopping point.** An LSM engine with a deterministic simulator and SMART-measured write amplification is a complete, defensible system on its own — with zero text or vector features.
-- **`08_KICKOFF.md` lists unresolved decisions**, including a genuine contradiction in the invariants around SIMD and `unsafe`. They are marked as open, not hidden.
-- **The signature experiment** is in `02_ROADMAP.md` P11: under sustained write load, issue a million hybrid queries against this engine and against an Elasticsearch + Qdrant stack, and count the responses where the three views disagree. That number is the whole thesis.
+- **`docs/KICKOFF.md` lists unresolved decisions**, including a genuine contradiction in the invariants around SIMD and `unsafe`. They are marked as open, not hidden.
+- **The signature experiment** is in `docs/ROADMAP.md` P11: under sustained write load, issue a million hybrid queries against this engine and against an Elasticsearch + Qdrant stack, and count the responses where the three views disagree. That number is the whole thesis.
 
 I would genuinely like to hear about it if you do. Open an issue.
 
 ## Prior work
 
-The design assembles published research. The contribution is the composition, not the components. Full credit in `01_ARCHITECTURE.md`:
+The design assembles published research. The contribution is the composition, not the components. Full credit in `docs/ARCHITECTURE.md`:
 
 PGM-Index (Ferragina & Vinciguerra), BuRR (Dillinger et al.), RaBitQ (Gao & Long), SuRF (Zhang et al.), Monkey and Dostoevsky (Dayan et al.), FastCDC (Xia et al.), WiscKey (Lu et al.), Block-Max WAND (Ding & Suel), SIMD-BP128 (Lemire & Boytsov), Adaptive Radix Tree (Leis et al.), and the deterministic simulation approach pioneered by FoundationDB.
 
 ## License
 
-**Documentation and specification:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — use, adapt, and build on it freely, including commercially. Attribution required.
+**Documentation and specification:** [CC BY 4.0](LICENSE) — use, adapt, and build on it freely, including commercially. Attribution required.
 
-**Any code added later:** Apache-2.0 OR MIT.
+**Any code added later:** [Apache-2.0](LICENSE-APACHE) OR [MIT](LICENSE-MIT), at your option.
 
-**The TEKWE3 name is not licensed** under either. See `09_AUTHORSHIP.md`.
+**The TEKWE3 name is not licensed** under either. The full split is in [`LICENSING.md`](LICENSING.md); copyright, moral rights, and the trademark position in [`AUTHORSHIP.md`](AUTHORSHIP.md).
+
+Found a hole in the design? [`SECURITY.md`](SECURITY.md) says what is most worth reporting. Sending a change? [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Citation
 
 ```
 Hami. TEKWE3: A Design for Transactionally Consistent Hybrid Search
 in a Unified Tri-Modal Storage Engine. 2026.
-https://github.com/<user>/tekwe3-design
+https://github.com/hami9/tekwe3
 ```
 
+A machine-readable `CITATION.cff` is at the repository root.
+
 ---
+
+```
+TEKWE3 — created and authored by Hami.
+Documentation licensed under CC BY 4.0; any code under Apache-2.0 OR MIT.
+The TEKWE3 name and logo are trademarks of the author and are
+not licensed under the above.
+```
 
 *Designed by Hami, 2026. If you build it, tell me.*

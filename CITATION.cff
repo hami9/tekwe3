@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: >-
+  TEKWE3: A Design for Transactionally Consistent Hybrid Search in a
+  Unified Tri-Modal Storage Engine
+message: >-
+  If you use or build on this design, please cite it using the metadata
+  in this file.
+type: software
+authors:
+  - alias: Hami
+    name: Hami
+repository-code: https://github.com/hami9/tekwe3
+url: https://github.com/hami9/tekwe3
+abstract: >-
+  A complete engineering specification for a single-node storage engine in
+  which key-value, full-text, and vector indexes live inside the same
+  immutable segment, sharing one write-ahead log, one MVCC snapshot, and one
+  compaction pipeline. Two observations make the composition possible: LSM
+  compaction and Lucene segment merge are the same operation, and IVF vector
+  partitions merge cheaply where HNSW graphs do not. A hybrid query -
+  predicate filter, BM25, and approximate nearest neighbour - is served from a
+  single log sequence number, making cross-index skew structurally zero rather
+  than merely small. The specification includes the on-disk format, a
+  fifteen-phase roadmap with falsifiable exit criteria, a
+  deterministic-simulation-first correctness strategy, and a self-audit of its
+  own gaps. It is a design; it has not been implemented or measured.
+keywords:
+  - storage engine
+  - LSM tree
+  - hybrid search
+  - vector search
+  - full-text search
+  - MVCC
+  - retrieval-augmented generation
+  - deterministic simulation testing
+license: CC-BY-4.0
+date-released: '2026-09-02'
+version: '1.0'

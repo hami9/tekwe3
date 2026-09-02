@@ -97,7 +97,7 @@ The design contains original engineering work. Recording it here establishes pro
 
 Claiming another researcher's algorithm as one's own would destroy the credibility of the genuine contributions above. Correct attribution protects the author's claims, it does not weaken them.
 
-**Establishing the date:** the git history is the primary record. Every commit is timestamped and signed. For stronger evidence, tag the first public release and archive it — a Software Heritage archive or a Zenodo DOI both produce a citable, timestamped record independent of GitHub.
+**Establishing the date:** the git history is the primary record. Every commit is timestamped; commit signing is still an open item in §9, and until it is turned on the timestamps carry the weight alone. For stronger evidence, tag the first public release and archive it — a Software Heritage archive or a Zenodo DOI both produce a citable, timestamped record independent of GitHub.
 
 ---
 
@@ -142,17 +142,18 @@ Every source file carries:
 
 ```
 TEKWE3 — created and authored by Hami.
-Licensed under Apache-2.0 OR MIT.
+Documentation licensed under CC BY 4.0; any code under Apache-2.0 OR MIT.
 The TEKWE3 name and logo are trademarks of the author and are
 not licensed under the above.
 ```
 
-For academic or technical citation:
+For academic or technical citation — this is the canonical title, and it is
+the one recorded in `CITATION.cff`:
 
 ```
-Hami. TEKWE3: A Unified Tri-Modal Storage Engine with
-Transactionally Consistent Hybrid Search. 2026.
-https://github.com/<user>/<repo>
+Hami. TEKWE3: A Design for Transactionally Consistent Hybrid Search
+in a Unified Tri-Modal Storage Engine. 2026.
+https://github.com/hami9/tekwe3
 ```
 
 ---
@@ -160,18 +161,33 @@ https://github.com/<user>/<repo>
 ## 9. Checklist — complete before the repository goes public
 
 ```
+[x] LICENSE — CC BY 4.0, covering the documentation this repository holds
+[x] LICENSE-APACHE and LICENSE-MIT present at the repository root
+[x] NOTICE file with the trademark reservation from §8
+[x] LICENSING.md — the split, stated before code makes it ambiguous
+[x] This AUTHORSHIP.md committed
+[x] README credits the author by name, above the fold
+[x] CONTRIBUTING.md states the DCO requirement
+[x] SECURITY.md — disclosure policy, and how to report a design flaw
+[x] CITATION.cff — machine-readable, canonical title
 [ ] Copyright line with the author's name in every source file
-[ ] LICENSE-APACHE and LICENSE-MIT present at the repository root
-[ ] NOTICE file with the trademark reservation from §8
-[ ] This AUTHORSHIP.md committed
+      → nothing to do until code exists; SPDX header specified in LICENSING.md §3
 [ ] docs/CITATIONS.md complete — every borrowed algorithm credited
-[ ] README credits the author by name, above the fold
-[ ] CONTRIBUTING.md states the DCO requirement
+      → P0 deliverable; docs/ARCHITECTURE.md carries the credit meanwhile
 [ ] Git commits signed (`git config commit.gpgsign true`)
 [ ] Employment IP position confirmed, if applicable
-[ ] Project name checked for existing trademarks in software
+[~] Project name checked for existing trademarks in software
+      → informal search, 2026-09-02: no crate on crates.io, no npm package,
+        and no software trademark found under TEKWE3 or TEKWE. Nearest hit
+        is TEK WEH (US reg. 5522942), pharmaceuticals — a different class,
+        different mark. This is a clearance search, not legal clearance:
+        the register still has to be searched in the jurisdictions that
+        matter before the name is relied on commercially.
 [ ] First release archived for a timestamped record (Software Heritage or Zenodo)
 ```
+
+The remaining open items are the ones that cannot be closed by writing a file: two
+wait for code, and three require an action outside the repository.
 
 ---
 
