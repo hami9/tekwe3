@@ -97,7 +97,7 @@ The design contains original engineering work. Recording it here establishes pro
 
 Claiming another researcher's algorithm as one's own would destroy the credibility of the genuine contributions above. Correct attribution protects the author's claims, it does not weaken them.
 
-**Establishing the date:** the git history is the primary record. Every commit is timestamped; commit signing is still an open item in §9, and until it is turned on the timestamps carry the weight alone. For stronger evidence, tag the first public release and archive it — a Software Heritage archive or a Zenodo DOI both produce a citable, timestamped record independent of GitHub.
+**Establishing the date:** the git history is the primary record. Every commit is timestamped; commit signing is still an open item in §9, and until it is turned on the timestamps carry the weight alone. The stronger evidence is in place: v1.0 was tagged and released on 2026-09-02 and is archived on Zenodo under **[10.5281/zenodo.22262651](https://doi.org/10.5281/zenodo.22262651)**, submitted to the Software Heritage archive, and included in GitHub's Archive Program. Each of those is a citable, timestamped record that does not depend on this repository continuing to exist.
 
 ---
 
@@ -183,11 +183,16 @@ https://github.com/hami9/tekwe3
         different mark. This is a clearance search, not legal clearance:
         the register still has to be searched in the jurisdictions that
         matter before the name is relied on commercially.
-[ ] First release archived for a timestamped record (Software Heritage or Zenodo)
+[x] First release archived for a timestamped record (Software Heritage or Zenodo)
+      → v1.0, released 2026-09-02. Zenodo: doi.org/10.5281/zenodo.22262651.
+        Also submitted to the Software Heritage archive, and GitHub's own
+        Archive Program is enabled for the repository.
 ```
 
-The remaining open items are the ones that cannot be closed by writing a file: two
-wait for code, and three require an action outside the repository.
+Four items remain. Two wait for code to exist — the per-file copyright line and
+`docs/CITATIONS.md`. Two need an action outside the repository — turning on
+commit signing, and confirming the employment IP position. The name check
+stays `[~]`: a clearance search is not legal clearance.
 
 ---
 
