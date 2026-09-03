@@ -97,7 +97,7 @@ The design contains original engineering work. Recording it here establishes pro
 
 Claiming another researcher's algorithm as one's own would destroy the credibility of the genuine contributions above. Correct attribution protects the author's claims, it does not weaken them.
 
-**Establishing the date:** the git history is the primary record. Every commit is timestamped; commit signing is still an open item in §9, and until it is turned on the timestamps carry the weight alone. The stronger evidence is in place: v1.0 was tagged and released on 2026-09-02 and is archived on Zenodo under **[10.5281/zenodo.22262651](https://doi.org/10.5281/zenodo.22262651)**, submitted to the Software Heritage archive, and included in GitHub's Archive Program. Each of those is a citable, timestamped record that does not depend on this repository continuing to exist.
+**Establishing the date:** the git history is the primary record. Every commit is timestamped but deliberately not signed — see the §9 entry for why, and for the two conditions that would reverse it. The weight therefore rests on the archives, and they are in place: v1.0 was tagged and released on 2026-09-02 and is archived on Zenodo under **[10.5281/zenodo.22262651](https://doi.org/10.5281/zenodo.22262651)**, submitted to the Software Heritage archive, and included in GitHub's Archive Program. Each of those is a citable, timestamped record that does not depend on this repository continuing to exist.
 
 ---
 
@@ -174,7 +174,24 @@ https://github.com/hami9/tekwe3
       → nothing to do until code exists; SPDX header specified in LICENSING.md §3
 [ ] docs/CITATIONS.md complete — every borrowed algorithm credited
       → P0 deliverable; docs/ARCHITECTURE.md carries the credit meanwhile
-[ ] Git commits signed (`git config commit.gpgsign true`)
+[—] Git commits signed — decided against, 2026-09-03, revisit if either
+      condition below changes
+      → What signing would prove — that a commit bearing the author's name
+        was actually made by the author — is covered here by the archives:
+        the Zenodo DOI, Software Heritage, and GitHub's Archive Program each
+        hold a dated copy that does not depend on git metadata.
+      → Most commits in this repository are made by an AI agent from a remote
+        environment that does not hold the author's key, so signing would
+        produce a partly-signed history rather than a signed one, and
+        GitHub's vigilant mode would then mark every agent commit
+        "Unverified" — worse-looking than the unsigned state it replaces.
+      → Revisit when either changes: a second person contributes, or the
+        repository starts carrying code. At that point impersonation has
+        something worth stealing and the calculation flips.
+      → This does not touch the DCO. `git commit -s` is still required of
+        every contributor per §6 and `CONTRIBUTING.md`; a sign-off is a
+        legal assertion in the message, not a cryptographic signature, and
+        the two are unrelated despite the shared word.
 [ ] Employment IP position confirmed, if applicable
 [~] Project name checked for existing trademarks in software
       → informal search, 2026-09-02: no crate on crates.io, no npm package,
@@ -189,10 +206,12 @@ https://github.com/hami9/tekwe3
         Archive Program is enabled for the repository.
 ```
 
-Four items remain. Two wait for code to exist — the per-file copyright line and
-`docs/CITATIONS.md`. Two need an action outside the repository — turning on
-commit signing, and confirming the employment IP position. The name check
-stays `[~]`: a clearance search is not legal clearance.
+Three items remain. Two wait for code to exist — the per-file copyright line
+and `docs/CITATIONS.md`. One needs an action outside the repository: confirming
+the employment IP position. The name check stays `[~]` because a clearance
+search is not legal clearance, and commit signing is `[—]` — closed by a
+decision rather than by an action, with the reasoning above so that a reader
+six months from now can judge whether it still holds.
 
 ---
 
