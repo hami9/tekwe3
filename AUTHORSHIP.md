@@ -25,13 +25,28 @@ This file states all three explicitly so that they are never assumed away.
 
 ## 2. Copyright
 
-Copyright in this work belongs to **Hami**, the sole author, from the moment of creation. Registration is not required for copyright to exist under the Berne Convention, to which both Iran and Canada are parties.
+Copyright in this work belongs to **Hami**, the sole author, from the moment of creation. Registration is not required for copyright to exist under the Berne Convention, to which Iran, Canada, and the United States are all parties.
 
 **What the open-source license does:** grants the public a permission to use, modify, and redistribute the code under stated conditions.
 
 **What it does not do:** transfer ownership. The author remains the copyright holder and may additionally license the same work under different terms to anyone, at any time, including commercially. Open-sourcing is not exclusive and is not irreversible for future versions.
 
-**Practical consequence:** the author can dual-license — Apache-2.0/MIT for the public, and a separate commercial license for a company that wants terms the public license does not offer. Only the copyright holder can do this. It is one of the main reasons sole authorship is worth preserving.
+**Practical consequence:** the author can dual-license — Apache-2.0/MIT for the public, and a separate commercial license for a company that wants terms the public license does not offer. Only the copyright holder can do this.
+
+**What the author actually intends, stated so nobody has to guess.** This
+design is published to be used, not to be sold. Anyone who finds it useful may
+build on it freely, commercially included, under the license terms — that is
+what CC BY 4.0 is for and it is the intended outcome, not a fallback.
+
+Ownership is kept for **attribution**, not for revenue: so that the work stays
+credited to its author and cannot be passed off as someone else's. The
+dual-licensing option above is a consequence of sole authorship, not a plan;
+it stays open because closing it would cost something and keeping it costs
+nothing.
+
+If someone building this wants help, the author is available to collaborate on
+a freelance basis. That is the only commercial interest here, and it is in the
+work, not in the licence.
 
 ---
 
@@ -77,6 +92,12 @@ Others may not:
 
 This is the same position taken by Rust, Linux, and PostgreSQL: the code is free, the name is not.
 
+**What the reservation is for.** Not exclusivity — the design itself is free to
+use and to build into a product (§2). The name is held back so that a fork
+cannot present itself as the original, and so that a reader who finds something
+called TEKWE3 can tell whether it came from here. It protects the attribution,
+which is the one thing the author is actually keeping.
+
 ---
 
 ## 5. Original contributions — what is actually the author's
@@ -117,15 +138,46 @@ While the project is solo, ownership is unambiguous. The moment a second person 
 
 **Recommendation:** DCO for a portfolio and reputation project. CLA only if commercial dual-licensing is a real plan.
 
+**Decided: DCO.** Commercial dual-licensing is not a plan here (§2), so the one
+thing a CLA buys is worth nothing to this project, while its cost — asking a
+contributor to sign a legal agreement before their first patch — is real. If a
+contributor's work later makes part of the project unrelicensable by the author
+alone, that is an acceptable consequence of a design meant to be used freely.
+
 ---
 
-## 7. Employment and prior claims
+## 7. Independent contractor status and prior claims
 
-Worth confirming once, in writing, and then never worrying about again:
+**There is no employer.** The author works freelance, on personally owned
+equipment, across three jurisdictions — Iran, Canada, and the United States
+(Georgia). No employment contract exists, written or otherwise, and this
+design was not produced for or delivered to any client.
 
-- Work produced on personal time, on personal equipment, and outside an employer's field of business is normally the author's. Some employment contracts and some jurisdictions define this more broadly than expected.
-- If there is any current or past employment contract with an IP assignment clause, read it before the first public commit.
-- If any doubt exists, a short written acknowledgment from the employer that this project is personal removes the ambiguity permanently. Obtaining it before publication is easy; obtaining it after the project becomes valuable is not.
+That matters because the rule people worry about — the one that hands work to
+an employer by default — is a rule about *employment*, and it does not reach an
+independent contractor in any of the three:
+
+| Jurisdiction | The rule for an independent contractor |
+|---|---|
+| **United States** | A work by an independent contractor is "made for hire" only if it falls into one of the statute's enumerated categories **and** a signed written agreement says so. Software normally satisfies neither. Absent that, the author owns it. |
+| **Canada** | The employer-ownership rule applies to work made under a *contract of service* — employment. A contractor works under a *contract for services*, and keeps copyright absent a written assignment. |
+| **Iran** | Under the 1379 software protection law, economic rights pass to an employer or commissioner only where creating that software was the purpose of the employment, or the subject of the contract. Neither applies here. |
+
+The common thread: **no signed written assignment, no transfer.** None was
+signed.
+
+**Where the real exposure is, if anywhere:** not employment, but a *client
+contract*. Some freelance agreements contain a clause assigning "all
+intellectual property created during the term" rather than only the agreed
+deliverables. Such a clause could, in principle, reach unrelated personal
+work. The check worth doing once is to read the IP clause of each active
+client agreement and confirm it is scoped to deliverables — and to note which
+law each names as governing, since with work in three jurisdictions the answer
+comes from the contract, not from a general rule.
+
+**Moral rights are unaffected either way.** They cannot be assigned even by
+agreement (§3), so attribution stays with the author regardless of how any
+economic-rights question is resolved.
 
 ---
 
@@ -192,7 +244,15 @@ https://github.com/hami9/tekwe3
         every contributor per §6 and `CONTRIBUTING.md`; a sign-off is a
         legal assertion in the message, not a cryptographic signature, and
         the two are unrelated despite the shared word.
-[ ] Employment IP position confirmed, if applicable
+[~] Employment IP position confirmed, if applicable
+      → Not applicable: there is no employer. The author is an independent
+        contractor working on personally owned equipment, and in all three
+        jurisdictions involved a contractor keeps copyright absent a signed
+        written assignment — none was signed. See §7.
+      → One check remains, and it is about clients rather than employment:
+        confirm the IP clause of each active client agreement is scoped to
+        that engagement's deliverables, not to "all intellectual property
+        created during the term".
 [~] Project name checked for existing trademarks in software
       → informal search, 2026-09-02: no crate on crates.io, no npm package,
         and no software trademark found under TEKWE3 or TEKWE. Nearest hit
@@ -206,12 +266,13 @@ https://github.com/hami9/tekwe3
         Archive Program is enabled for the repository.
 ```
 
-Three items remain. Two wait for code to exist — the per-file copyright line
-and `docs/CITATIONS.md`. One needs an action outside the repository: confirming
-the employment IP position. The name check stays `[~]` because a clearance
-search is not legal clearance, and commit signing is `[—]` — closed by a
-decision rather than by an action, with the reasoning above so that a reader
-six months from now can judge whether it still holds.
+Two items remain, and both wait for code to exist: the per-file copyright line
+and `docs/CITATIONS.md`. Nothing is blocked on an action outside the
+repository. Two lines carry a `[~]` because they are answered but not closed —
+the name clearance search is not legal clearance, and the IP position leaves
+one client-contract check worth doing once — and commit signing is `[—]`,
+closed by a decision rather than an action, with the reasoning above so a
+reader six months from now can judge whether it still holds.
 
 ---
 
@@ -223,5 +284,5 @@ six months from now can judge whether it still holds.
 | A company ships it commercially without credit | Attribution required by the license; trademark blocks the name |
 | A fork calls itself the same name | Trademark reservation §4 |
 | Someone claims the architecture as theirs | Dated git history + archived release §5 |
-| A future employer claims ownership | Prior public dated publication §7 |
-| The author wants to sell a commercial license later | Sole copyright preserved by DCO policy §6 |
+| A future employer or client claims ownership | No signed assignment and contractor status §7, plus the dated public record §5 |
+| The author ever needs to license commercially — not a plan, but not foreclosed | Sole copyright preserved by DCO policy §6 |
