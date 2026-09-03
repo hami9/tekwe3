@@ -82,6 +82,8 @@ If you have the hardware and the interest, take it. It is CC BY, and I would gen
 
 ---
 
+*Cite it as:* Hami. *TEKWE3: A Design for Transactionally Consistent Hybrid Search in a Unified Tri-Modal Storage Engine.* 2026. [doi.org/10.5281/zenodo.22262651](https://doi.org/10.5281/zenodo.22262651)
+
 *TEKWE3 — created and authored by Hami. Documentation licensed under CC BY 4.0; any code under Apache-2.0 OR MIT. The TEKWE3 name is a trademark of the author and is not licensed under either.*
 
 *The design assembles published research — PGM-Index, BuRR, RaBitQ, SuRF, Monkey, FastCDC, WiscKey, Block-Max WAND, and the deterministic simulation approach from FoundationDB. The contribution is the composition, not the components. Full credit in the repository.*
