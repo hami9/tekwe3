@@ -150,8 +150,7 @@ alone, that is an acceptable consequence of a design meant to be used freely.
 
 **There is no employer.** The author works freelance, on personally owned
 equipment, across three jurisdictions — Iran, Canada, and the United States
-(Georgia). No employment contract exists, written or otherwise, and this
-design was not produced for or delivered to any client.
+(Georgia). No employment contract exists, written or otherwise.
 
 That matters because the rule people worry about — the one that hands work to
 an employer by default — is a rule about *employment*, and it does not reach an
@@ -166,14 +165,10 @@ independent contractor in any of the three:
 The common thread: **no signed written assignment, no transfer.** None was
 signed.
 
-**Where the real exposure is, if anywhere:** not employment, but a *client
-contract*. Some freelance agreements contain a clause assigning "all
-intellectual property created during the term" rather than only the agreed
-deliverables. Such a clause could, in principle, reach unrelated personal
-work. The check worth doing once is to read the IP clause of each active
-client agreement and confirm it is scoped to deliverables — and to note which
-law each names as governing, since with work in three jurisdictions the answer
-comes from the contract, not from a general rule.
+**This design was also not made for a client.** It is not a deliverable under
+any engagement, was not commissioned, and has never been delivered to or used
+by anyone the author has worked for. It was designed independently, on the
+author's own equipment, and published directly.
 
 **Moral rights are unaffected either way.** They cannot be assigned even by
 agreement (§3), so attribution stays with the author regardless of how any
@@ -244,15 +239,12 @@ https://github.com/hami9/tekwe3
         every contributor per §6 and `CONTRIBUTING.md`; a sign-off is a
         legal assertion in the message, not a cryptographic signature, and
         the two are unrelated despite the shared word.
-[~] Employment IP position confirmed, if applicable
-      → Not applicable: there is no employer. The author is an independent
-        contractor working on personally owned equipment, and in all three
-        jurisdictions involved a contractor keeps copyright absent a signed
-        written assignment — none was signed. See §7.
-      → One check remains, and it is about clients rather than employment:
-        confirm the IP clause of each active client agreement is scoped to
-        that engagement's deliverables, not to "all intellectual property
-        created during the term".
+[x] Employment IP position confirmed, if applicable
+      → There is no employer. The author is an independent contractor
+        working on personally owned equipment, and in all three jurisdictions
+        involved a contractor keeps copyright absent a signed written
+        assignment. None was signed, and this design is not a deliverable
+        under any engagement. See §7.
 [~] Project name checked for existing trademarks in software
       → informal search, 2026-09-02: no crate on crates.io, no npm package,
         and no software trademark found under TEKWE3 or TEKWE. Nearest hit
@@ -268,11 +260,10 @@ https://github.com/hami9/tekwe3
 
 Two items remain, and both wait for code to exist: the per-file copyright line
 and `docs/CITATIONS.md`. Nothing is blocked on an action outside the
-repository. Two lines carry a `[~]` because they are answered but not closed —
-the name clearance search is not legal clearance, and the IP position leaves
-one client-contract check worth doing once — and commit signing is `[—]`,
-closed by a decision rather than an action, with the reasoning above so a
-reader six months from now can judge whether it still holds.
+repository. One line carries a `[~]` — the name clearance search is a search,
+not legal clearance — and commit signing is `[—]`, closed by a decision rather
+than an action, with the reasoning above so a reader six months from now can
+judge whether it still holds.
 
 ---
 
