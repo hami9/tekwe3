@@ -93,6 +93,10 @@ Everything needed is here. A few starting notes:
 
 I would genuinely like to hear about it if you do. Open an issue.
 
+I am not trying to make money from this design — if it is useful to you, use
+it. If you are building it and want the person who designed it involved, I
+take freelance work; an issue is the way to reach me.
+
 ## Prior work
 
 The design assembles published research. The contribution is the composition, not the components. Full credit in `docs/ARCHITECTURE.md`:
